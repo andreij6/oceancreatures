@@ -18,9 +18,15 @@ _OC.Add = function () {
     var picture = document.getElementById("").value;
 
     var newCreature = new _OC.Creature(name, ocean, picture);
+
+    name    = " ";
+    ocean   = " ";
+    picture = " ";
 };
 
-_OC.Post = function () { };
+_OC.Post = function () {
+
+};
 
 _OC.Get = function () { };
 
