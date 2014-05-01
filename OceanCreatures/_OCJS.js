@@ -186,6 +186,10 @@ _OC.changeGet = function () {
     _OC.Get();
 };
 
+setInterval(function () {
+    _OC.Get();
+}, 30000);
+
 _OC.Get();
 
 
