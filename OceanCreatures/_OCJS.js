@@ -88,11 +88,11 @@ _OC.Get = function () {
 
 _OC.Redraw = function () {
     _OC.sortCreatures();
-
+    
     var holder = "";
     for (var s in _OC.Creatures) {
         holder += _OC.Creatures[s].name + " "
-            +_OC.Creatures[s].ocean + " <img src="
+            +_OC.Creatures[s].ocean + " <img height=\"50px\" width=\"50\" src="
             +_OC.Creatures[s].picture + ">"
             + "<button onclick='_OC.Delete(\"" + _OC.Creatures[s].key + "\")'>Delete</button><br/>"
             + "<button onclick='_OC.Edit(\"" + _OC.Creatures[s].key + "\")'>Edit</button><br/> " ;
@@ -177,6 +177,10 @@ _OC.Edit = function (key) {
 
 };
 
+_OC.Sort = function () {
+
+};
+
 _OC.sortCreatures = function () {
 
 };
@@ -186,9 +190,28 @@ _OC.changeGet = function () {
     _OC.Get();
 };
 
-setInterval(function () {
-    _OC.Get();
-}, 30000);
+// setInterval unfriendly - every x seconds it will run until you tell it to stop
+//------ do the same -----------
+//_OC.timeInt = function () { setInterval(_OC.Get, 30000) };
+//_OC.timeInt = function(){setInterval(function () { _OC.Get(); }, 30000)};
+
+_OC.timeOut = function () { setTimeout(_OC.Get, 30000) };
+
+// setTimeout ------ runs waits x seconds then stops
+//  _OC.timeOut = function () {
+//      setTimeout(function () { myPost(timeout) }, 5000);
+//  }
+
+//  _OC.timeOut();
+
+_OC.timeOut();
+
+//stoping a set Interval
+//var t = setInterval(myPost, 200);
+
+//setTimeout(function () { window.clearInterval(t) }, 10000);
+
+
 
 _OC.Get();
 
