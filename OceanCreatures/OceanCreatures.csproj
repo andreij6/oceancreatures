@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.html" />
+    <Content Include="Styles.css" />
     <Content Include="Web.config" />
     <Content Include="_OCJS.js" />
   </ItemGroup>

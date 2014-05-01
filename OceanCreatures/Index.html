@@ -7,8 +7,15 @@
     <input id="name" placeholder="Creature Name" type="text" />
     <input id="ocean" placeholder="Ocean" type="text" />
     <input id="picture" placeholder="Picture URL" type="text" />
+    <input id="currentKey" type="hidden"/>
 
-    <button type="button" onclick="_OC.Add();">Create</button>
+    <button type="button" onclick="_OC.Add()">Create</button>
+    <button type="button" class="hidden" id="update" onclick="_OC.Update()">Update</button>
+    
+    <form action="">
+        <input type="radio" id="DbOne" name="Database" value="0" onclick="_OC.changeGet()" checked>Database 1<br>
+        <input type="radio" id="Dbtwo" name="Database" value="1" onclick="_OC.changeGet()">Database 2
+    </form>
 
     <div id="creatureList">
 
